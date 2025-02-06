@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+html{
+    background-color: #f1f5f9;
+}
+
+body{
+    padding: 2rem;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
