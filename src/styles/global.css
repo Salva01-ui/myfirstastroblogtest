@@ -4,21 +4,31 @@ html{
     background-color: #f1f5f9;
 }
 
-body{
-    padding: 2rem;
-}
-
 h1{
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 h3{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
+
+code{
+    padding: 8px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+html.dark {
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  .dark .nav-links a {
+    color: #fff;
+  }

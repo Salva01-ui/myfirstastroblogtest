@@ -1,8 +1,6 @@
 
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro"
 
 const pageTitle = "Sobre";
 
@@ -14,31 +12,21 @@ const identity = {
 
 const skills = ["Python", "JavaScript", "HTML", "CSS", "Django"];
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header/>
+<BaseLayout pageTitle={pageTitle}>
+	<h1>Sobre</h1>
 
-		<h1>Sobre</h1>
+	<div class="sobre-mim">
+		<h2>Conheça-me um pouco</h2>
+		<p>Meu nome é <strong>{identity.fistName}</strong></p>
+		<p>Sou um desenvolvedor de <strong>{identity.occupation}</strong></p>
+		<p>Sou de <strong>{identity.country}</strong></p>
 
-		<div class="sobre-mim">
-			<h2>Conheça-me um pouco</h2>
-			<p>Meu nome é <strong>{identity.fistName}</strong></p>
-			<p>Sou um desenvolvedor de <strong>{identity.occupation}</strong></p>
-			<p>Sou de <strong>{identity.country}</strong></p>
-	
-			<h3>Minhas habilidades:</h3>
-			<ul>
-				{skills.map((skill) => (<li>{skill}</li>))}
-			</ul>
-		</div>
+		<h3>Minhas habilidades:</h3>
+		<ul>
+			{skills.map((skill) => (<li>{skill}</li>))}
+		</ul>
+	</div>
+</BaseLayout>
 
-		<Footer/>
-	</body>
-</html>
+
+
